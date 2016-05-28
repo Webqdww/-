@@ -1,0 +1,12 @@
+1、只增加水平滚动条或者竖直滚动条
+（1）只当文字图片溢出时才出现滚动条
+  overflow-x:hidden;
+  overflow-y:auto;
+（2）一直出现滚动条
+  overflow-y:hidden;
+  overflow-x:scroll;
+2、增加双滚动条
+ (1)溢出时才出现
+overflow:auto;
+（2）一直出现
+overflow:scroll;
