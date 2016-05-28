@@ -1,0 +1,35 @@
+/*详见http://www.w3school.com.cn/jquery/jquery_hide_show.asp*/
+
+1\隐藏/显示 hide(),show(),toggle()
+
+$("#hide").click(function(){
+  $("p").hide();
+});
+
+$("#show").click(function(){
+  $("p").show();
+});
+
+2\淡入淡出 fadeIn() fadeOut() fadeToggle() fadeTo()
+
+$("#fadeIn").click(function(){
+  $("p").fadeIn("slow");
+});
+
+$("#fadeOut").click(function(){
+  $("p").fadeOut(5000);
+});
+
+$("#hide").click(function(){
+  $("p").fadeToggle(4000);
+});
+
+$("#show").click(function(){
+  $("p").fadeTo("slow",0.15);
+});
+
+3\滑动slideDown() slideUp() slideToggle()
+
+4\动画animate()
+
+5\stop stop()
