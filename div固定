@@ -1,0 +1,7 @@
+使得div固定在屏幕中的某个位置；
+例如：id="bottom"固定在屏幕最下方
+#bottom
+{
+  position：absolute;
+  bottom:0px;
+}
