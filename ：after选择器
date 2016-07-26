@@ -1,0 +1,10 @@
+在被选择的元素后面插入内容
+p:after
+{ 
+content:"台词：-";
+background-color:yellow;
+color:red;
+font-weight:bold;
+}
+
+则在p的后面插入“台词：-"
