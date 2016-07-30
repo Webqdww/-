@@ -1,0 +1,76 @@
+1、radial-gradient径向渐变
+2、linear-gradient线性渐变
+	/* Standard syntax (must be last) 因为浏览器不同对角度控制不同*/
+	
+3、border-sizing:border-box;可以对div进行合理安排；
+4、flex布局 --弹性布局
+	包含6个属性
+	\`flex-direction属性决定主轴的方向（即项目的排列方向）。
+		row（默认值）：主轴为水平方向，起点在左端。
+		row-reverse：主轴为水平方向，起点在右端。
+		column：主轴为垂直方向，起点在上沿。
+		column-reverse：主轴为垂直方向，起点在下沿。	
+		例如：flex-direction:column;
+	\`flex-wrap属性定义如果一条轴线排不下，如何换行
+		nowrap（默认）：不换行。
+		wrap：换行，第一行在上方。
+		wrap-reverse：换行，第一行在下方。
+	\`flex-flow	flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap
+	\`justify-content属性定义了项目在主轴上的对齐方式。
+		flex-start（默认值）：左对齐
+		flex-end：右对齐
+		center： 居中
+		space-between：两端对齐，项目之间的间隔都相等。
+		space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
+	\`align-items属性定义项目在交叉轴上如何对齐。
+		flex-start：交叉轴的起点对齐。
+		flex-end：交叉轴的终点对齐。
+		center：交叉轴的中点对齐。
+		baseline: 项目的第一行文字的基线对齐。
+		stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。
+	\`align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
+		flex-start：与交叉轴的起点对齐。
+		flex-end：与交叉轴的终点对齐。
+		center：与交叉轴的中点对齐。
+		space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。
+		space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。
+		stretch（默认值）：轴线占满整个交叉轴。
+5、border-top：15px solid red;
+6、content=‘\2605’;特殊符号
+7、rgba(*,*,*,t)  --t表示透明度 .5表示50%，0表示透明；
+8、transparent:透明色
+9、block的作用：
+	display:block可以理解为块，举个简单的例子！比如你做一个超链接，
+		<li><a href="#">超链接</a></li>
+		当你鼠标移过到文字的时候，超链接有效果！
+		而当我把样式这样设置：
+		li a{width:100px;height:100px; display:block; color:red; text-decoration:none;}
+		鼠标移到文字周围100*100的地方，就有超链接效果了，就是把100*100做为一块来的超链接！
+   inline保证默认不换行；
+   inline-block使元素具有双重特性
+10、vertical-align 属性设置元素的垂直对齐方式。
+11、postion:relative和absolute，box-shadow方向不同
+12、transform：（叠加效果用空格分隔）
+	translate()
+	元素从其当前位置移动，根据给定的 left（x 坐标） 和 top（y 坐标） 位置参数
+	值 translate(50px,100px) 把元素从左侧移动 50 像素，从顶端移动 100 像素。
+	rotate()
+	元素顺时针旋转给定的角度。允许负值，元素将逆时针旋转。
+	值 rotate(30deg) 把元素顺时针旋转 30 度。
+	scale()
+	，元素的尺寸会增加或减少，根据给定的宽度（X 轴）和高度（Y 轴）参数：
+	值 scale(2,4) 把宽度转换为原始尺寸的 2 倍，把高度转换为原始高度的 4 倍。
+	skew()
+	元素翻转给定的角度，根据给定的水平线（X 轴）和垂直线（Y 轴）参数：
+	值 skew(30deg,20deg) 围绕 X 轴把元素翻转 30 度，围绕 Y 轴翻转 20 度。
+	
+	matrix()
+	matrix() 方法需要六个参数，包含数学函数，允许您：旋转、缩放、移动以及倾斜元素。
+13、box-shadow
+    text-shadow（颜色，x,y，模糊半径）或者（x,y,模糊半径，颜色）
+	box-shadow和text-shadow一样可以使用一个或多个投影，如果使用多个投影时必须需要用逗号“，”分开。
+		如：box-shadow: 0 0 0 8px #FFF,
+          		 	0 0 0 18px #007C59 inset,
+          		 	0 0 0 26px #FCB514 inset;
+
+	
