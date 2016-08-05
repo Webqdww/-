@@ -1,0 +1,59 @@
+1、word-wrap 属性允许长单词或 URL 地址换行到下一行。	word-wrap: normal|break-word;
+2、repeating-linear-gradient(180deg, 
+            rgb(13, 94, 175), rgb(13, 94, 175) 8px, 
+            white 8px, white 16px);
+	可重复线性渐变
+3、利用radial-gradient可在div内部生成圆。。。（）flags--turkey
+	radila-gradient(circle at xpx,ypx,color_circle r,color-other R);
+	r<=R时模糊。中间部分颜色渐变。
+4、keyframes 关键帧              --Loaders-AwesomeDots
+@keyframes name
+{}
+opacity:透明度
+   animation: animation-name （名称）
+	      animation-duration(持续时间，单位s）
+	      animation-timing-function(变换速率或称播放方式ease;ease-in;ease-in-out;linear;cubic-bezier） 
+	      animation-delay（动画开始时间）
+	      animation-iteration-count（播放动画的循环次数，默认为1,infinite(无限次)）
+	      animation-direction(normal|reverse|alternate|alternate-reverse|initial|inherit;如果设置为normal时，动画的每次循环都是向前播放；
+		另一个值是alternate，他的作用是，动画播放在第偶数次向前播放，第奇数次向反方向播放。)
+	      animation-play-state(动画播放状态，少有内核支持)
+5、background: radial-gradient(ellipse at 30px 10px,  #fff 0%, #03a9f4 25%, #000 90%);可以构造出一个立体的圆；
+本质是在div中构造一个椭圆
+6、box-shadow:xy是必须的值。然后是模糊距离，模糊尺寸，颜色，inset。都是可选的
+7、hsla（angle,%,%,a）、hsl（angle,%,%）例如hsla（170，50%，50%，1）
+第一个表示灰度：0%灰色，100%为全彩，第二个表示亮度，0%为黑色，100%白色。a表示不透明度。0表示完全透明
+8、width：calc（算术表达式）
+9、background-position:top left,top right;
+	top left
+	x% y%
+	xpx ypx
+   background-size:50% 50%;
+		   宽度 高度或者使用像素
+   background-repeat: no-repeat;
+10、z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。
+    	Z-index 仅能在定位元素上奏效（例如 position:absolute;）！
+11、@keyframes可以做动画效果的：
+transform
+background
+width、height
+content
+。。。
+12、transition
+transition-property	规定设置过渡效果的 CSS 属性的名称。
+transition-duration	规定完成过渡效果需要多少秒或毫秒。
+transition-timing-function	规定速度效果的速度曲线。
+transition-delay	定义过渡效果何时开始。
+
+transition: property duration timing-function delay;
+transition:2s;设置过渡时间为2s
+13、display:box;该显示样式的新值可将此元素及其直系子代加入弹性框模型中。实现子元素间的空间分配。弹性盒子模型的声明
+使得子元素有box-flex属性
+详见//////知识点/css box-flex属性鑫/
+box-flex属性：使得元素具有弹性。根据比例占有父元素
+flex-grow 属性用于设置或检索弹性盒的扩展比率。。可动画
+14、:nth-child(n) 选择器匹配属于其父元素的第 N 个子元素，不论元素的类型。
+15、vw相对于视窗的宽度
+    vh相对于视窗的高度
+类似百分比
+有利用实现自适应
