@@ -1,0 +1,30 @@
+1、<section> 标签定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。
+2、border-radius:;
+可以分别设置4个角的弧度
+border-radius:5px 5px 15px 15px;
+凭这个可以制作不规则多边形：border-top-left-radius: 2em 0.5em;
+			    border-top-right-radius: 1em 3em;
+                            border-bottom-right-radius: 4em 0.5em;
+			    border-bottom-left-radius: 1em 3em;	
+3、transition\\animation;
+transition-timing-function\\animation-timing-function
+		1、ease：（逐渐变慢）默认值，ease函数等同于贝塞尔曲线(0.25, 0.1, 0.25, 1.0).
+
+		2、linear：（匀速），linear 函数等同于贝塞尔曲线(0.0, 0.0, 1.0, 1.0).
+
+		3、ease-in：(加速)，ease-in 函数等同于贝塞尔曲线(0.42, 0, 1.0, 1.0).
+
+		4、ease-out：（减速），ease-out 函数等同于贝塞尔曲线(0, 0, 0.58, 1.0).
+
+		5、ease-in-out：（加速然后减速），ease-in-out 函数等同于贝塞尔曲线(0.42, 0, 0.58, 1.0)
+
+		6、cubic-bezier：（该值允许你去自定义一个时间曲线）， 特定的cubic-bezier曲线。
+				
+		 (x1, y1, x2, y2)四个值特定于曲线上点P1和点P2。所有值需在[0, 1]区域内，否则无效。
+animation-fill-mode:	 none | forwards | backwards | both;
+none	不改变默认行为。
+forwards	当动画完成。
+backwards	在 animation-delay 所指定的一段时间内，在动画显示之前，应用开始属性值（在第一个关键帧中定义）。
+both	向前和向后填充模式都被应用。
+
+4、#ID:hover{}
