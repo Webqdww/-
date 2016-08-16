@@ -1,0 +1,191 @@
+///////////////////////////////2016-8-8///////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+
+1、常见的HTML事件
+onchange	HTML 元素改变
+onclick	用户点击 HTML 元素
+onmouseover	用户在一个HTML元素上移动鼠标
+onmouseout	用户从一个HTML元素上移开鼠标
+onkeydown	用户按下键盘按键
+onload	浏览器已完成页面的加载
+2、字符串引号的使用：
+	你可以在字符串中使用引号，字符串中的引号不要与字符串的引号相同:
+		实例
+		var answer = "It's alright";
+	你也可以在字符串添加转义字符来使用引号：
+		实例
+		var x = 'It\'s alright';
+3、转义字符
+\'	单引号
+\"	双引号
+\\	反斜杠
+\n	换行
+\r	回车
+\t	tab(制表符)
+\b	退格符
+\f	换页符
+4、不同类型的循环
+JavaScript 支持不同类型的循环：
+for - 循环代码块一定的次数
+for/in - 循环遍历对象的属性
+while - 当指定的条件为 true 时循环指定的代码块
+do/while - 同样当指定的条件为 true 时循环指定的代码块
+
+var person={fname:"John",lname:"Doe",age:25}; 
+
+for (x in person)
+{
+    txt=txt + person[x];
+}
+5、typeof 操作符来检测变量的数据类型。
+在JavaScript中，数组是一种特殊的对象类型。 因此 typeof [1,2,3,4] 返回 object。 
+用 typeof 检测 null 返回是object。
+在 JavaScript 中, undefined 是一个没有设置值的变量。
+typeof 一个没有值的变量会返回 undefined。
+6、请使用 isNaN() 全局函数来判断一个值是否是 NaN 值。NAN表示非数字
+7、constructor 属性返回所有 JavaScript 变量的构造函数。
+实例
+"John".constructor                 // 返回函数 String()  { [native code] }
+(3.14).constructor                 // 返回函数 Number()  { [native code] }
+false.constructor                  // 返回函数 Boolean() { [native code] }
+[1,2,3,4].constructor              // 返回函数 Array()   { [native code] }
+{name:'John', age:34}.constructor  // 返回函数 Object()  { [native code] }
+new Date().constructor             // 返回函数 Date()    { [native code] }
+function () {}.constructor         // 返回函数 Function(){ [native code] }
+你可以使用 constructor 属性来查看是对象是否为数组 (包含字符串 "Array"):
+实例
+function isArray(myArray) {
+    return myArray.constructor.toString().indexOf("Array") > -1;
+}
+8、正则表达式var patt = /w3cschool/i
+/w3cschool/i  是一个正则表达式。
+w3cschool  是一个模式 (用于检索)。
+i  是一个修饰符 (搜索不区分大小写)
+修饰符	描述
+i	执行对大小写不敏感的匹配。
+g	执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）。
+m	执行多行匹配。
+9、字符串断行需要使用反斜杠(\)，如下所示:
+实例 3
+var x = "Hello \
+World!";
+10、自调用函数
+函数表达式可以 "自调用"。
+自调用表达式会自动调用。
+如果表达式后面紧跟 () ，则会自动调用。
+不能自调用声明的函数。
+通过添加括号，来说明它是一个函数表达式：
+实例
+(function () {
+    var x = "Hello!!";      // 我将调用自己
+})();
+
+11、
+JavaScript 闭包
+还记得函数自我调用吗？该函数会做什么？
+实例
+var add = (function () {
+    var counter = 0;
+    return function () {return counter += 1;}
+})();
+
+add();
+add();
+add();
+
+// 计数器为 3
+
+
+实例解析
+变量 add 指定了函数自我调用的返回字值。
+自我调用函数只执行一次。设置计数器为 0。并返回函数表达式。
+add变量可以作为一个函数使用。非常棒的部分是它可以访问函数上一层作用域的计数器。
+这个叫作 JavaScript 闭包。它使得函数拥有私有变量变成可能。
+计数器受匿名函数的作用域保护，只能通过 add 方法修改。
+Note	闭包是可访问上一层函数作用域里变量的函数，即便上一层函数已经关闭。
+
+12、基本筛选器
+    :first	$("p:first")	第一个 <p> 元素
+    :last	$("p:last")	最后一个 <p> 元素
+    查找find
+     var element = container.find(":first");
+
+13、jQuery.each(object, [callback])通用例遍方法，可用于例遍对象和数组。
+	object:需要例遍的对象或数组。
+	callback:每个成员/元素执行的回调函数。
+	实例：
+	$.each(slides, function(index) {
+            var slide = slides.eq(index); //获取到每一个li元素    
+            slide.css({	width  : width + 'px',
+    	    height : height + 'px'
+	});
+14、选择器
+	eq 返回值Array<Element>
+	index从 0 开始计数
+15、.css访问匹配元素的样式属性。css(name|pro|[,val|fn]).css({})
+属性之间逗号间隔
+ slide.css({	width  : width + 'px',
+    	    height : height + 'px'
+	});	
+$("p").css({ "color": "#ff0011", "background": "blue" });
+属性和值都是字符串！！！！
+16、scrollTo() 方法可把内容滚动到指定的坐标。
+	scrollTo(xpos,ypos)
+参数	描述
+xpos	必需。要在窗口文档显示区左上角显示的文档的 x 坐标。
+ypos	必需。要在窗口文档显示区左上角显示的文档的 y 坐标。
+17、选择一个对象 $("#id")	
+18、利用闭包的方法对程序进行封装；函数返回函数
+19、position()
+V1.2概述
+获取匹配元素相对父元素的偏移。
+返回的对象包含两个整型属性：top 和 left。为精确计算结果，请在补白、边框和填充属性上使用像素单位。此方法只对可见元素有效。
+20、只有函数表达式可以自调用
+21、.addClass('classname1 classname2 classname3') ===不需要加点
+22、 var left = boy.css('left');
+        // 强制做了一个改变目标left的处理
+        // 动画是要运行10秒,所以此时动画还是没有结束的
+     boy.css({'left':left});
+读取当前boy 的left值并且设置boy的值。
+23、var defer = $.Deferred(); //构建异步对象
+-----------API----------------------------------------------------------------------
+|deferred.always()						                    |
+|Add handlers to be called when the Deferred object is either resolved or rejected. |
+|deferred.done()								    |
+|Add handlers to be called when the Deferred object is resolved.	 	    |
+|deferred.fail()								    |
+|Add handlers to be called when the Deferred object is rejected.		    |
+|Also in: Deprecated > Deprecated 1.7 | Removed					    |
+|deferred.isRejected()								    |			
+|Determine whether a Deferred object has been rejected.
+|Also in: Deprecated > Deprecated 1.7 | Removed
+|deferred.isResolved()
+|Determine whether a Deferred object has been resolved.
+|deferred.notify()
+|Call the progressCallbacks on a Deferred object with the given args.
+|deferred.notifyWith()
+|Call the progressCallbacks on a Deferred object with the given context and args.
+|Also in: Deprecated > Deprecated 1.8
+|deferred.pipe()
+|Utility method to filter and/or chain Deferreds.
+|deferred.progress()
+|Add handlers to be called when the Deferred object generates progress notifications.
+|deferred.promise()
+|Return a Deferred’s Promise object.
+--------------------------------------------------------------------------------------
+24、.offset()
+	获取匹配元素在当前视口的相对偏移。
+	返回的对象包含两个整型属性：top 和 left，以像素计。此方法只对可见元素有效。
+    .position()
+	获取匹配元素相对父元素的偏移。
+	返回的对象包含两个整型属性：top 和 left。为精确计算结果，请在补白、边框和填充属性上使用像素单位。
+	此方法只对可见元素有效。
+25、setTimeout
+
+定义和用法
+setTimeout() 方法用于在指定的毫秒数后调用函数或计算表达式。
+语法
+setTimeout(code,millisec)
+参数	          描述
+code	        必需。要调用的函数后要执行的 JavaScript 代码串。
+millisec	必需。在执行代码前需等待的毫秒数。
