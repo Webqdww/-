@@ -1,0 +1,7 @@
+1、子代元素选择器
+div > p
+表示只作为div子元素的p
+2、steps(n,[start||end])实现关键帧；n表示0%到**%的步数而不是100%
+3、精灵动画的实现方式是将动作画到一起，通过控制background-position改变背景。
+利用animation-timing-function:steps(1,start);实现一帧一帧显示
+4、切换背景图片如果不事先加载，会出现闪屏的情况。。则先调用加载一下，设置容器的width或者height不可见即可
